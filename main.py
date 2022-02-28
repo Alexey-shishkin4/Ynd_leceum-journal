@@ -135,7 +135,7 @@ def add_jobs():
                 form.collaborators.data, datetime.datetime.now(),
                 form.is_finished.data)
         return redirect('/')
-    return render_template('jobs.html', title='Добавление новости', form=form)
+    return render_template('jobs.html', title='Добавление работы', form=form)
 
 
 @app.route('/jobs/<int:id>', methods=['GET', 'POST'])
@@ -167,7 +167,7 @@ def edit_jobs(id):
         else:
             abort(404)
     return render_template('jobs.html',
-                           title='Редактирование новости',
+                           title='Редактирование работы',
                            form=form
                            )
 
